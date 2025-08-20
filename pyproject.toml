@@ -1,0 +1,14 @@
+[project]
+name = "torch-hyperparam"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "kagglehub>=0.3.12",
+    "mlflow>=3.3.0",
+    "optuna>=4.5.0",
+    "pillow>=11.3.0",
+    "scikit-learn>=1.7.1",
+    "torch>=2.8.0",
+]
