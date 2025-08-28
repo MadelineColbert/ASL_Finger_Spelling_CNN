@@ -1,5 +1,6 @@
-import torch
-from src.model_training import train
+# import torch
+from src.model_training import training_loop
+# from src.data_handling import load_data
 
 def main():
     print("Hello from torch-hyperparam!")
@@ -7,4 +8,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    train()
+    training_loop()
+    
