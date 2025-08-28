@@ -40,5 +40,5 @@ class VisionModel(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         #Softmax?
-        x = F.softmax(x)
+        # x = F.softmax(x)
         return x

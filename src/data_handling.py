@@ -23,8 +23,6 @@ def get_files():
 
     TRANSFORM = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Normalize()
-
     ])
     train_folder = ImageFolder(train_path, transform=TRANSFORM)
     generator = torch.Generator()
