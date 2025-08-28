@@ -11,3 +11,4 @@ wheels/
 asl_alphabet_test/
 asl_alphabet_train/
 mlruns/
+.env
