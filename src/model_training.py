@@ -82,9 +82,7 @@ def train(model:VisionModel, criterion:nn.CrossEntropyLoss, optimizer:optim.Adam
     
     return signature
 
-def validation(run_id, valid_data:DataLoader, device):
-    model_uri = f"runs:/{run_id}/final_model"
-    model: VisionModel = mlflow.pytorch.load_model(model_uri)
+def validation(model:VisionModel, valid_data:DataLoader, device):
     model.eval()
     total_correct = 0
     total_used = 0
