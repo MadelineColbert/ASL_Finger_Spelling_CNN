@@ -1,5 +1,6 @@
 import cv2
 import argparse
+from client_code.model_handling import preprocess_image, get_prediction
 
 def get_camera(server_url):
     cap = cv2.VideoCapture(server_url)
@@ -12,7 +13,11 @@ def get_camera(server_url):
         ret, frame = cap.read()
         if not ret:
             break
+        ml_frame = preprocess_image(frame)
+        letter_prediction = get_prediction(ml_frame)
         cv2.imshow("Webcam Stream", frame)
+        print(letter_prediction)
+
         if cv2.waitKey(1) & 0xFF == 27:
             break
 
