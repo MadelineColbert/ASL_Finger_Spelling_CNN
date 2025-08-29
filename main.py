@@ -7,8 +7,7 @@ import os
 
 def main():
     load_dotenv()
-    mlflow.set_tracking_uri(os.getenv("MLFLOW_URI"))
-    mlflow.set_experiment("asl_finger_spelling")
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = training_loop(device)
     print("TRAINING FINISHED")

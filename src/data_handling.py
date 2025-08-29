@@ -33,7 +33,7 @@ def get_files():
     valid_loader = DataLoader(valid, batch_size=batch_size)
     test_loader = DataLoader(test, batch_size=batch_size)
 
-    return train_loader, valid_loader, test_loader
+    return train_loader, valid_loader, test_loader, train_folder.classes
 
 if __name__ == "__main__":
     get_files()
